@@ -12,6 +12,12 @@ body {
     font-size: 200%;
     width: 30%;
     margin-left: auto;
+    border: 1px solid rebeccapurple;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 5%;
+    background-color: rebeccapurple;
+    color: #ffffff;
 }
 
 .div {
