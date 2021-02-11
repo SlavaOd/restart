@@ -4,8 +4,6 @@ body {
 }
 .container-sm {
     width: 500px;
-    /* height: 200px; */
-    /* border: 2px solid red; */
 }
 
 .main_name {
@@ -19,6 +17,11 @@ body {
     background-color: rebeccapurple;
     color: #ffffff;
 }
+
+/* .radio1, .radio2 {
+    display: inline-block;
+    margin-right: 10px;
+} */
 
 .div {
     border: 2px solid black;
@@ -63,7 +66,7 @@ body {
     margin-bottom: 3%;
 }
 
-.reg {
+.reg, .quantity {
     font-weight: 600;
 }
 .itog2 {

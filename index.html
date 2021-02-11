@@ -9,17 +9,22 @@
 </head>
 <body>
     <div class="container-sm">
+        
         <div class="fix">
             <ul class="fix_list">
-                <li class="fix_item">Стартуем от 10 Регистраций СП через Проф</li>
                 <li class="fix_item">Участвуют ТТ с кол-вом регистраций СП через Профессионал от 10шт</li>
-                <li class="fix_item">В итог учитываються только регистрации СП проданых на ТТ через СТС</li>
-                <li class="fix_item">Дополнительный бонус не может быть больше бонуса по регистрациям</li>
+                <li class="fix_item">В итог учитываются только регистрации СП, проданых на ТТ, через СТС</li>
+                <li class="fix_item">Дополнительный бонус не может превышать сумму бонуса по регистрациям</li>
                 <li class="fix_item">На бонус влияет тип проданного СП</li>
             </ul>
             <button class="back">Назад</button>
         </div>
         <h2 class="main_name">reStart</h2>
+        <form action="">
+            <p class="radio1"></p><input type="radio" checked  name="radio" id=""> Національний (поріг: 10) </p>
+            <p class="radio2"><input type="radio"  name="radio" id=""> Регіональний (поріг: 15) </p>
+        </form>
+        
         <p class="name">к-ть реєстрацій сп Розваги</p>
         <input class="rozvag inp" placeholder='кількість реєстрацій' type="text" name="" id="">
         <p class="name">к-ть реєстрацій сп Відео/Максимальний</p>
@@ -27,6 +32,7 @@
         <p class="reg name"></p>
         <p class="name">Кількість апсельних операцій</p>
         <input class="upsell inp" placeholder='кількість операцій' type="text" name="" id="">
+        <p class="quantity"></p>
         <h3 class="itog"></h3>
         <h3 class="itog2"></h3>
         <button class="result">Підрахувати</button>
