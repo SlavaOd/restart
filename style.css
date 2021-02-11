@@ -13,16 +13,13 @@ body {
     border: 1px solid rebeccapurple;
     border-radius: 10px;
     text-align: center;
-    margin-top: 5%;
+    /* margin-top: 5%; */
     background-color: rebeccapurple;
     color: #ffffff;
 }
-
-/* .radio1, .radio2 {
-    display: inline-block;
-    margin-right: 10px;
-} */
-
+.radio1 {
+    margin-bottom: 0;
+}
 .div {
     border: 2px solid black;
 }
