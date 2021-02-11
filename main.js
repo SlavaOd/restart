@@ -19,8 +19,7 @@ result.onclick = function() {
     if (resNum < 10) {
         plan = 10 - resNum
         itog.style.color = 'red'
-        itog.innerHTML = 'Ви зробили меньше 10 реєстрацій. Щоб отримати додатковий бонус зробіть ще ' + plan 
-        // break
+        itog.innerHTML = 'Ви зробили меньше 10 реєстрацій. Щоб отримати додатковий бонус зареєструйте ще ' + plan + 'СП'
     } else if (resNum == upsell.value) {
        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
@@ -32,7 +31,6 @@ result.onclick = function() {
     }
     
 }
-
 alt.onclick = function() {
     location.reload()
 }
