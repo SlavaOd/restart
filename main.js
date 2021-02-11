@@ -8,6 +8,7 @@ var main = document.querySelector('.main')
 var back = document.querySelector('.back')
 var fix = document.querySelector('.fix')
 var itog = document.querySelector('.itog')
+var itog2 = document.querySelector('.itog2')
 
 result.onclick = function() {
     x = rozvag.value
@@ -18,16 +19,18 @@ result.onclick = function() {
     if (resNum == upsell.value) {
        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
+       itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
     }
     if (upsell.value / resNum == 0.5) {
         restart = resSum +  resSum / 2
         itog.innerHTML = 'Додатковий бонус: ' +  resSum / 2 + 'грн'
+        itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
     }
     
 }
 
 alt.onclick = function() {
-    alert('Загальний бонус : ' +  restart)
+    alert('Загальний бонус : ' +  restart + 'грн')
 }
 
 main.onclick = function() {

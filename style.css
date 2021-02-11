@@ -20,7 +20,7 @@ body {
 }
 
 .inp {
-    margin-bottom: 12%;
+    margin-bottom: 6%;
     display: block;
 }
 .inp:last-of-type {
@@ -55,5 +55,12 @@ body {
     margin: 0 auto;
 }
 .name {
-    margin-bottom: 2%;
+    margin-bottom: 3%;
+}
+
+.reg {
+    font-weight: 600;
+}
+.itog2 {
+    margin-bottom: 5%;
 }
