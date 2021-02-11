@@ -16,12 +16,16 @@ result.onclick = function() {
     resSum = (x*30) + (y*50)
     resNum = +x + +y
     reg.innerHTML = 'Разом:' + '<br>' + 'Реєстрацій: ' + resNum + 'шт ' +  '<br>' + ' Бонус: ' + resSum + 'грн '
-    if (resNum == upsell.value) {
+    if (resNum < 10) {
+        plan = 10 - resNum
+        itog.style.color = 'red'
+        itog.innerHTML = 'Ви зробили меньше 10 реєстрацій. Щоб отримати додатковий бонус зробіть ще ' + plan 
+        // break
+    } else if (resNum == upsell.value) {
        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
        itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
-    }
-    if (upsell.value / resNum == 0.5) {
+    }else if (upsell.value / resNum == 0.5) {
         restart = resSum +  resSum / 2
         itog.innerHTML = 'Додатковий бонус: ' +  resSum / 2 + 'грн'
         itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
@@ -30,7 +34,7 @@ result.onclick = function() {
 }
 
 alt.onclick = function() {
-    alert('Загальний бонус : ' +  restart + 'грн')
+    location.reload()
 }
 
 main.onclick = function() {
