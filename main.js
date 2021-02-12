@@ -23,6 +23,9 @@ function fun1() {
         } else if (r[i].checked && i == 1) {
             pln = 15
         }
+        else if (r[i].checked && i == 2) {
+            pln = 5
+        }
     }
 }
 
@@ -36,7 +39,7 @@ result.onclick = function() {
     resNum = +x + +y
     up = upsell.value *30
     reg.innerHTML = 'Разом:' + '<br>' + 'Реєстрацій: ' + resNum + 'шт ' +  '<br>' + ' Бонус: ' + resSum + 'грн '
-    quantity.innerHTML = 'Середній бонус за ' + upsell.value + ' операцій ~ ' + up + ' грн'
+    // quantity.innerHTML = 'Середній бонус за ' + upsell.value + ' операцій ~ ' + up + ' грн'
     if (resNum < pln) {
         plan = pln - resNum
         itog.style.color = 'red'
