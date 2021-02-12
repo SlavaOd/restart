@@ -37,7 +37,6 @@ result.onclick = function() {
     y = video.value
     resSum = (x*30) + (y*50)
     resNum = +x + +y
-    up = upsell.value *30
     reg.innerHTML = 'Разом:' + '<br>' + 'Реєстрацій: ' + resNum + 'шт ' +  '<br>' + ' Бонус: ' + resSum + 'грн '
     // quantity.innerHTML = 'Середній бонус за ' + upsell.value + ' операцій ~ ' + up + ' грн'
     if (resNum < pln) {
@@ -47,11 +46,11 @@ result.onclick = function() {
     } else if (resNum == upsell.value) {
        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
-       itog2.innerHTML = 'Загальний бонус : ' +  (restart + up) + 'грн'
+       itog2.innerHTML = 'Загальний бонус : ' +  restart  + 'грн'
     } else if (upsell.value / resNum == 0.5) {
         restart = resSum +  resSum / 2
         itog.innerHTML = 'Додатковий бонус: ' +  resSum / 2 + 'грн'
-        itog2.innerHTML = 'Загальний бонус : ' +  (restart + up) + 'грн'
+        itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
     }
     
 }
