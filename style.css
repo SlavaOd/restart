@@ -17,9 +17,7 @@ body {
     background-color: rebeccapurple;
     color: #ffffff;
 }
-.radio1 {
-    margin-bottom: 0;
-}
+
 .div {
     border: 2px solid black;
 }
@@ -68,4 +66,20 @@ body {
 }
 .itog2 {
     margin-bottom: 5%;
+}
+.radio1,.radio2 {
+    margin-bottom: 0;
+}
+.radio2 {
+    margin-bottom: 0;
+}
+.flex {
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap:wrap ;
+    margin: 0 auto;
+}
+button {
+    width: 120px;
 }

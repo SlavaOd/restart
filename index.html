@@ -6,11 +6,15 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <title>ReStart Calc</title>
+    <style>
+        button {
+            margin-bottom: 10px;
+        } 
+    </style>
     
 </head>
 <body>
     <div class="container-sm">
-        
         <div class="fix">
             <ul class="fix_list">
                 <li class="fix_item">Участвуют ТТ с кол-вом регистраций СП через Профессионал от 10шт</li>
@@ -22,7 +26,7 @@
         </div>
         <h2 class="main_name">reStart</h2>
         <!-- <form action=""> -->
-            <p class="radio1"></p><input type="radio" checked  name="radio" id=""> Національний (поріг: 10) </p>
+            <p class="radio1"><input type="radio" checked  name="radio" id=""> Національний (поріг: 10)</p>
             <p class="radio2"><input type="radio"  name="radio" id=""> Регіональний (поріг: 15) </p>
             <p class="radio3"><input type="radio"  name="radio" id=""> Регіональний (поріг: 5) </p>
         <!-- </form> -->
@@ -36,10 +40,12 @@
         <!-- <p class="quantity"></p> -->
         <h3 class="itog"></h3>
         <h3 class="itog2"></h3>
-        <button class="result">Підрахувати</button>
-        <button class="alt">Оновити</button>
-        <button class="main">Умови акції</button>
-        <a href="./prez/prez.html"><button>Презентація</button></a>
+        <div class="flex">
+            <button class="result">Підрахувати</button>
+            <button class="alt">Оновити</button>
+            <button class="main">Умови акції</button>
+            <a href="./prez/prez.html"><button>Презентація</button></a>
+        </div>
     </div>
     <script src="main.js"></script>
 </body>

@@ -43,7 +43,7 @@ result.onclick = function() {
         plan = pln - resNum
         itog.style.color = 'red'
         itog.innerHTML = 'Ви зробили меньше ' + pln + ' реєстрацій. Щоб отримати додатковий бонус зареєструйте ще ' + plan + ' СП'
-    } else if (resNum == upsell.value) {
+    } else if (resNum == upsell.value || resNum < upsell.value) {
        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
        itog2.innerHTML = 'Загальний бонус : ' +  restart  + 'грн'
