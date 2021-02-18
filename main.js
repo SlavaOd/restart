@@ -11,11 +11,8 @@ var itog = document.querySelector('.itog')
 var itog2 = document.querySelector('.itog2')
 var quantity = document.querySelector('.quantity')
 
-// var timer = setInterval(function(){
-//     fun1()
-// },2000)
-
 function fun1() {
+
     var r = document.getElementsByName('radio');
         for (var i=0;i<r.length; i++) {
         if (r[i].checked && i == 0) {
@@ -29,8 +26,6 @@ function fun1() {
     }
 }
 
-  
-
 result.onclick = function() {
     fun1()
     x = rozvag.value
@@ -38,20 +33,31 @@ result.onclick = function() {
     resSum = (x*30) + (y*50)
     resNum = +x + +y
     reg.innerHTML = 'Разом:' + '<br>' + 'Реєстрацій: ' + resNum + 'шт ' +  '<br>' + ' Бонус: ' + resSum + 'грн '
-    // quantity.innerHTML = 'Середній бонус за ' + upsell.value + ' операцій ~ ' + up + ' грн'
     if (resNum < pln) {
         plan = pln - resNum
         itog.style.color = 'red'
         itog.innerHTML = 'Ви зробили меньше ' + pln + ' реєстрацій. Щоб отримати додатковий бонус зареєструйте ще ' + plan + ' СП'
-    } else if (resNum == upsell.value || resNum < upsell.value) {
-       restart = resSum*2
+        itog2.innerHTML = ''
+    } else if (upsell.value < pln) {
+        plan = pln - upsell.value
+        itog.style.color = 'red'
+        itog.innerHTML = 'Ви зробили меньше ' + pln + ' апсельних операцій. Щоб отримати додатковий бонус зробіть ще ' + plan
+        itog2.innerHTML = ''
+
+    }
+    else if ( upsell.value >= resNum ) {
+        restart = resSum*2
        itog.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
        itog2.innerHTML = 'Загальний бонус : ' +  restart  + 'грн'
-    } else if (upsell.value / resNum == 0.5) {
-        restart = resSum +  resSum / 2
-        itog.innerHTML = 'Додатковий бонус: ' +  resSum / 2 + 'грн'
-        itog2.innerHTML = 'Загальний бонус : ' +  restart + 'грн'
-    }
+    } else {
+        percent = upsell.value / resNum
+        console.log(percent.toFixed(2) * resSum)
+        bonus = percent.toFixed(2) * resSum
+        // restart = resSum +  resSum / 2
+        itog.innerHTML = 'Додатковий бонус: ' +  percent.toFixed(2) * resSum + 'грн'
+        itog2.innerHTML = 'Загальний бонус : ' +  (resSum + bonus) + 'грн'
+        
+    } 
     
 }
 alt.onclick = function() {
