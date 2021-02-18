@@ -54,8 +54,8 @@ result.onclick = function() {
         console.log(percent.toFixed(2) * resSum)
         bonus = percent.toFixed(2) * resSum
         // restart = resSum +  resSum / 2
-        itog.innerHTML = 'Додатковий бонус: ' +  percent.toFixed(2) * resSum + 'грн'
-        itog2.innerHTML = 'Загальний бонус : ' +  (resSum + bonus) + 'грн'
+        itog.innerHTML = 'Додатковий бонус: ' +  Math.floor(percent.toFixed(2) * resSum) + 'грн'
+        itog2.innerHTML = 'Загальний бонус : ' + Math.floor(resSum + bonus) + 'грн'
         
     } 
     
