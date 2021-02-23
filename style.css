@@ -94,3 +94,20 @@ body {
 button {
     width: 120px;
 }
+
+.city {
+    width: 30%;
+    margin-left: auto;
+    padding-left: 35px;
+    position: relative;
+}
+.city::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    background-image: url(./Kyivstar.png);
+    background-size: contain;
+    width: 25px;
+    height: 25px;
+}
