@@ -42,12 +42,7 @@ result.onclick = function() {
         out.style.color = 'red'
         out.innerHTML = 'Ви зробили меньше ' + pln + ' реєстрацій. Щоб отримати додатковий бонус зареєструйте ще ' + plan + ' СП'
         out_add.innerHTML = ''
-    } else if (upsell.value < pln) {
-        plan = pln - upsell.value
-        out.style.color = 'red'
-        out.innerHTML = 'Ви зробили меньше ' + pln + ' апсельних операцій. Щоб отримати додатковий бонус зробіть ще ' + plan
-        out_add.innerHTML = ''
-    } else if ( upsell.value >= resNum ) {
+    }  else if ( upsell.value >= resNum ) {
         restart = resSum*2
         out.innerHTML = 'Додатковий бонус : ' +  resSum + 'грн'
         out_add.innerHTML = 'Загальний бонус : ' +  restart  + 'грн'
